@@ -1,0 +1,19 @@
+const path = require('path');
+
+var env       = process.env.NODE_ENV || 'development';
+
+if (env === 'production') {
+  module.exports = {
+    'config': path.resolve('dist/config', 'database.js'),
+    'models-path': path.resolve('dist', 'models'),
+    'seeders-path': path.resolve('dist', 'seeders'),
+    'migrations-path': path.resolve('dist', 'migrations')
+  }
+} else {
+  module.exports = {
+    'config': path.resolve('src/config', 'database.js'),
+    'models-path': path.resolve('src', 'models'),
+    'seeders-path': path.resolve('src', 'seeders'),
+    'migrations-path': path.resolve('src', 'migrations')
+  }
+}

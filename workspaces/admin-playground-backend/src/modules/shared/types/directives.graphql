@@ -1,0 +1,23 @@
+# Current implementation on graphql-import does not support directives declared outside of the scehma (in node.js code).
+# We have to redeclare each directive and type for now.
+directive @constraint(
+  # String constraints
+  minLength: Int
+  maxLength: Int
+  startsWith: String
+  endsWith: String
+  notContains: String
+  pattern: String
+  format: String
+
+  # Number constraints
+  min: Int
+  max: Int
+  exclusiveMin: Int
+  exclusiveMax: Int
+  multipleOf: Int
+) on INPUT_FIELD_DEFINITION
+
+scalar ConstraintString
+
+scalar ConstraintNumber
