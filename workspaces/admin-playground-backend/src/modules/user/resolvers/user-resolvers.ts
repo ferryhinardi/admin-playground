@@ -1,12 +1,10 @@
-const userData = [{ name: "user1" }, { name: "user2" }];
+import resolver from '../../shared/libs/graphql-sequelize/resolver';
 
 export default {
+  User: {
+    Role: resolver('Role')
+  },
   Query: {
-    users() {
-      return userData;
-    },
-    user(parent, args) {
-      return userData.filter((user) => user.name === args.name);
-    },
+    users: resolver('User')
   },
 };

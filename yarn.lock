@@ -4664,6 +4664,21 @@ data-urls@^1.0.0, data-urls@^1.1.0:
     whatwg-mimetype "^2.2.0"
     whatwg-url "^7.0.0"
 
+dataloader-sequelize@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.npmjs.org/dataloader-sequelize/-/dataloader-sequelize-2.1.2.tgz#bceb5d14cdfd6bd271be84bd6d23929a092ea5ea"
+  integrity sha512-ZEQx/I7NbBPMqL2WTnnQmJXfbhEB3PcW+urDnMHL/qPfGgQZNvRyO4NAF9y6jJuJ0qMjAhh4IRNjBW/d1NNlGg==
+  dependencies:
+    dataloader "^1.2.0"
+    lodash "^4.15.0"
+    lru-cache "^4.0.1"
+    shimmer "^1.2.1"
+
+dataloader@^1.2.0:
+  version "1.4.0"
+  resolved "https://registry.npmjs.org/dataloader/-/dataloader-1.4.0.tgz#bca11d867f5d3f1b9ed9f737bd15970c65dff5c8"
+  integrity sha512-68s5jYdlvasItOJnCuI2Q9s4q98g0pCyL3HrcKJu8KNugUl8ahgmZYg38ysLTgQjjXX3H8CJLkAvWrclWfcalw==
+
 debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.0, debug@^2.6.9:
   version "2.6.9"
   resolved "https://registry.npmjs.org/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
@@ -6523,6 +6538,13 @@ graphql-extensions@^0.12.4:
     "@apollographql/apollo-tools" "^0.4.3"
     apollo-server-env "^2.4.5"
     apollo-server-types "^0.5.1"
+
+graphql-relay@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.npmjs.org/graphql-relay/-/graphql-relay-0.6.0.tgz#18ec36b772cfcb3dbb9bd369c3f8004cf42c7b93"
+  integrity sha512-OVDi6C9/qOT542Q3KxZdXja3NrDvqzbihn1B44PH8P/c5s0Q90RyQwT6guhGqXqbYEH6zbeLJWjQqiYvcg2vVw==
+  dependencies:
+    prettier "^1.16.0"
 
 graphql-sequelize@^9.4.0:
   version "9.4.0"
@@ -8703,7 +8725,7 @@ lodash@4.17.15:
   resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
 
-"lodash@>=3.5 <5", lodash@^4.0.0, lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.16, lodash@^4.17.5, lodash@~4.17.10:
+"lodash@>=3.5 <5", lodash@^4.0.0, lodash@^4.15.0, lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.16, lodash@^4.17.5, lodash@~4.17.10:
   version "4.17.19"
   resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
   integrity sha512-JNvd8XER9GQX0v2qJgsaN/mzFCNA5BRe/j8JN9d+tWyGLSodKQHKFicdwNYzWwI3wjRnaKPsGj1XkBjx/F96DQ==
@@ -11019,6 +11041,11 @@ prettier@2.0.5:
   resolved "https://registry.npmjs.org/prettier/-/prettier-2.0.5.tgz#d6d56282455243f2f92cc1716692c08aa31522d4"
   integrity sha512-7PtVymN48hGcO4fGjybyBSIWDsLU4H4XlvOHfq91pz9kkGlonzwTfYkaIEwiRg/dAJF9YlbsduBAgtYLi+8cFg==
 
+prettier@^1.16.0:
+  version "1.19.1"
+  resolved "https://registry.npmjs.org/prettier/-/prettier-1.19.1.tgz#f7d7f5ff8a9cd872a7be4ca142095956a60797cb"
+  integrity sha512-s7PoyDv/II1ObgQunCbB9PdLmUcBZcnWOcxDh7O0N/UwDEsHyqkW+Qh28jW+mVuCdx7gLB0BotYI1Y6uI9iyew==
+
 pretty-bytes@^5.1.0:
   version "5.3.0"
   resolved "https://registry.npmjs.org/pretty-bytes/-/pretty-bytes-5.3.0.tgz#f2849e27db79fb4d6cfe24764fc4134f165989f2"
@@ -12442,6 +12469,11 @@ shellwords@^0.1.1:
   version "0.1.1"
   resolved "https://registry.npmjs.org/shellwords/-/shellwords-0.1.1.tgz#d6b9181c1a48d397324c84871efbcfc73fc0654b"
   integrity sha512-vFwSUfQvqybiICwZY5+DAWIPLKsWO31Q91JSKl3UYv+K5c2QRPzn0qzec6QPu1Qc9eHYItiP3NdJqNVqetYAww==
+
+shimmer@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.npmjs.org/shimmer/-/shimmer-1.2.1.tgz#610859f7de327b587efebf501fb43117f9aff337"
+  integrity sha512-sQTKC1Re/rM6XyFM6fIAGHRPVGvyXfgzIDvzoq608vM+jeyVD0Tu1E6Np0Kc2zAIFWIj963V2800iF/9LPieQw==
 
 side-channel@^1.0.2:
   version "1.0.2"

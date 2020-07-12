@@ -1,8 +1,12 @@
 type User {
-  name: String!
+  username: String
+  password: String
+  full_name: String
+  email: String
+  photo_url: String
+  Role: Role
 }
 
 type Query {
   users: [User!]!
-  user(name: String!): String!
 }

@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const apollo_server_express_1 = require("apollo-server-express");
 const graphql_1 = require("graphql");
 class UpperCaseDirective extends apollo_server_express_1.SchemaDirectiveVisitor {
-    static getDirectiveDeclaration(directiveName, schema) {
+    static getDirectiveDeclaration(directiveName) {
         console.log("inside getDirectiveDeclaration", directiveName);
         return new graphql_1.GraphQLDirective({
             name: directiveName,
@@ -23,7 +23,6 @@ class UpperCaseDirective extends apollo_server_express_1.SchemaDirectiveVisitor 
         });
     }
     visitFieldDefinition(field) {
-        console.log("inside visitFieldDefinition");
         const { resolve = graphql_1.defaultFieldResolver } = field;
         field.resolve = function (...args) {
             return __awaiter(this, void 0, void 0, function* () {

@@ -23,12 +23,12 @@ const app = express_1.default();
 app.use(cors_1.default({
     optionsSuccessStatus: 200,
 }));
-app.use((req, res, next) => {
+app.use((_, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
-app.get("/health", (req, res) => res.sendStatus(200));
+app.get("/health", (_, res) => res.sendStatus(200));
 server.applyMiddleware({
     app,
     path: "/",

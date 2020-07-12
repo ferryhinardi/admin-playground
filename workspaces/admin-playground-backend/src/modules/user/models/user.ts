@@ -1,12 +1,13 @@
 import { Sequelize, INTEGER, STRING, DATE } from 'sequelize';
 import bcrypt from 'bcrypt';
+import { UserInstance, CustomModelType } from '../../shared/typescriptType/ModelType';
 
 function getHashedPassword(password: string) {
   return bcrypt.hashSync(password, 8);
 }
 
 export default (sequelize: Sequelize) => {
-  const User = sequelize.define(
+  const User = sequelize.define<UserInstance>(
     'User',
     {
       id: {
@@ -14,13 +15,13 @@ export default (sequelize: Sequelize) => {
         primaryKey: true,
         autoIncrement: true
       },
-      email: STRING,
       username: STRING,
       fullName: {
         type: STRING,
         field: 'full_name'
       },
       password: STRING,
+      email: STRING,
       photoUrl: {
         type: STRING,
         field: 'photo_url'
@@ -39,6 +40,7 @@ export default (sequelize: Sequelize) => {
       }
     },
     {
+      modelName: 'User',
       tableName: 'users',
       deletedAt: 'deleted_at',
       paranoid: true,
@@ -66,6 +68,15 @@ export default (sequelize: Sequelize) => {
           return user;
         },
       },
-    })
+    });
+    // @ts-ignore
+    User.associate = (models: CustomModelType) => {
+      // @ts-ignore
+      User.Role = User.belongsTo(models.Role, {
+        foreignKey: 'role_id',
+        as: 'role',
+      })
+    };
+
     return User;
   };
